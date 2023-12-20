@@ -5,5 +5,5 @@ RUN npm install
 RUN npm instell pm2 -g
 COPY . . /
 ENV PORT 4000
-EXPOSE 3000
+EXPOSE $PORT
 CMD ["pm2-runtime","start","index.js","--name","node-ec2"]
